@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+</head>
+<body>
+  {% for customer in customers%}
+    <div style="border: 2px solid black; width: 150px; margin: 0 auto; margin-bottom: 20px; text-align: center">
+        <p>{{customer.name}}</p>
+        <p>{{customer.group}}</p>
+        <a href="{{ customer.get_absolute_url}}">More..</a>
+    </div>
+  {% endfor %}
+</body>
+</html>
